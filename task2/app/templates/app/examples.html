@@ -1,0 +1,17 @@
+{% extends 'app/base.html' %}
+
+{% block examples %}<li class="active">{% endblock %}
+{% block content %}
+    <div class="row">
+      <div class="col s12">
+        <h1 class="col s12">Каталог компьютеров Apple</h1>
+        {% for item in items %}
+          <div class="col s12 m8">
+            <div class="card">
+              {% include 'app/example_card.html' %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  {% endblock %}
